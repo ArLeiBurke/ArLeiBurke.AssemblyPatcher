@@ -2,10 +2,10 @@
 ## 背景
 手边有两个dll，一个是用C#编写的 A.dll ，另一个是用C++编写的B.dll。<br>
 B.dll 有导出好多函数供 A.dll 使用,通过P/Invoke 的方式。<br>
-想要实现对着两个dll进行重命名以达到其他人看不到我有使用这两个dll 的目的！！<br>
+想要实现对这两个dll进行重命名以达到其他人看不到我有使用这两个dll 的目的！！<br>
 
 ## 实现步骤
-1.直接对A.dll 重命名为 B.dll<br>
+1.直接对A.dll 重命名为 ChangedA.dll<br>
 2.通过Mono.Cecil修改程序集的 AssemblyName <br>
 3.去掉程序集的强签名<br>
 4.修改 DllImport Attribute 的第一个参数<br>
